@@ -1,0 +1,32 @@
+version: "3.5"
+
+services:
+  jmeter-server:
+    image: bomb0069/jmeter-runner:20211004-10
+    ports:
+      - 8081:80
+      
+    environment:
+      - SIAB_PASSWORD=11111111
+      - SIAB_SUDO=true
+      - SIAB_SSL=false
+
+  load-injector-1:
+    image: bomb0069/jmeter-runner:20211004-10
+    ports:
+      - 8082:80
+      
+    environment:
+      - SIAB_PASSWORD=11111111
+      - SIAB_SUDO=true
+      - SIAB_SSL=false
+
+  load-injector-2:
+    image: bomb0069/jmeter-runner:20211004-10
+    ports:
+      - 8083:80
+      
+    environment:
+      - SIAB_PASSWORD=11111111
+      - SIAB_SUDO=true
+      - SIAB_SSL=false
